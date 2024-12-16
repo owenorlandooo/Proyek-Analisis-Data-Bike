@@ -7,7 +7,7 @@ import pandas as pd
 
 base_path = os.path.dirname(os.path.dirname(__file__))
 data_path = os.path.join(base_path, "data", "day.csv")
-df = pd.read_csv(data_path)
+df = pd.read_csv("./dashboard/day.csv")
 
 st.title("Bike Sharing Dashboard 🚲")
 st.sidebar.header("Filter Data")
