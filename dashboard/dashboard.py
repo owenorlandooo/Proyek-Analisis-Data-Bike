@@ -21,10 +21,8 @@ df['weathersit'] = df['weathersit'].map({
 })
 df['workingday'] = df['workingday'].map({1: 'Weekday', 0: 'Weekend'})
 df['holiday'] = df['holiday'].map({1: 'Holiday', 0: 'Not Holiday'})
-
 season_filter = st.sidebar.multiselect("Pilih Musim", df['season'].unique(), default=df['season'].unique())
 weather_filter = st.sidebar.multiselect("Pilih Kondisi Cuaca", df['weathersit'].unique(), default=df['weathersit'].unique())
-
 filtered_df = df[(df['season'].isin(season_filter)) & (df['weathersit'].isin(weather_filter))]
 
 st.subheader("Rata-rata Penyewaan Sepeda Berdasarkan Musim")
